@@ -6,20 +6,20 @@ const Header = (hprop) => {
     </div>
   )
 }
+const Part = ({ part, tehtavat }) => {
+  return (
+    <p>{part} {tehtavat}</p>
+  );
+}
 
 const Content = (cprop) => {
-  console.log(cprop)
-  const part1 = 'Fundamentals of React '
-  const part2 = 'Using props to pass data '
-  const part3 = 'State of a component ' 
   return (
     <div>
-      <p>{part1}{cprop.ex1}</p>
-      <p>{part2}{cprop.ex2}</p>
-      <p>{part3}{cprop.ex3}</p>
+      <Part part="Fundamentals of React" tehtavat={cprop.ex1} />
+      <Part part="Using props to pass data" tehtavat={cprop.ex2} />
+      <Part part="State of a component" tehtavat={cprop.ex3} />
     </div>
-  )
-
+  );
 }
 
 const Total = (tprop) => {
